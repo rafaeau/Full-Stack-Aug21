@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset = "utf-8">
+        <title>Phone Shop: 4G & 5G Mobile Phones, Tablets & SIMs</title>
+        <style>
+            h1 {
+                font-size: 40px;
+                text-align: center;
+                margin: 0;
+                padding: 20px 0;
+                color: #12171d;
+                text-shadow: 1px 1px 1px rgb(183, 212, 255);
+            }
+            table,p,h4,h2,h3,footer {
+                text-align:center
+            }
+            img {
+                display: block;
+                margin: 0 auto;
+            }
+            table,td,th{
+                border : 1px solid black;
+                text-align : center
+            }  
+            table,textarea{
+                width : 100%
+            }
+            body {
+                width: 700px;
+                margin: 0 auto;
+                background-color: #ffffff;
+                padding: 0 20px 20px 20px;
+                border: 10px solid rgb(183, 212, 255);
+            }
+            html {
+                background-color: #2c4052;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>Phone Shop: 4G & 5G Mobile Phones, Tablets & SIMs</h1>
+        <h2>Top 5 products:</h2>
+        <table>
+            <tr>
+                <th>Image</th>
+                <th>Product</th>
+                <th>Description</th>
+                <th>Price</th>
+            </tr>
+            <tr>
+                <td><img src="https://m.media-amazon.com/images/I/71MHTD3uL4L._AC_UY218_.jpg" alt="IPhone 12 Pro Max" height=100 width=75></img></td>
+                <td><a href="https://www.amazon.co.uk/New-Apple-iPhone-Pro-128GB/dp/B08L5Q84BW/ref=sr_1_10?dchild=1&keywords=iphone&qid=1629203459&sr=8-10&th=1">IPhone 12 Pro Max</a></td>
+                <td>New Apple iPhone 12 Pro Max (128GB) - Pacific Blue</td>
+                <td>1,069.99</td>
+            </tr>
+            <tr>
+                <td><img src="https://m.media-amazon.com/images/I/419QYX84xhL._AC_UY218_.jpg" alt="Google Pixel 5" height=100 width=75></img></td>
+                <td><a href="https://www.amazon.co.uk/Google-Android-Mobile-Battery-Resistant-Just-Black/dp/B08JLSQWHD/ref=sr_1_1?crid=1P5TYH0TY2WU6&dchild=1&keywords=pixel+5&qid=1629204090&sprefix=pixe%2Caps%2C191&sr=8-1">Google Pixel 5</a></td>
+                <td>Google Pixel 5 128GB 5G Mobile Phone, Just Black - SIM Free Unlocked Smartphone</td>
+                <td>629.85</td>
+            </tr>
+            <tr>
+                <td><img src="https://m.media-amazon.com/images/I/81ycMvz8-bL._AC_UY218_.jpg" alt="Samsung Galaxy S21" height=100 width=75></img></td>
+                <td><a href="https://www.amazon.co.uk/Samsung-Galaxy-Smartphone-Android-Phantom/dp/B08QN9QHP4/ref=sr_1_1?dchild=1&keywords=galaxy+s22&qid=1629204649&sr=8-1">Samsung Galaxy S21</a></td>
+                <td>Samsung Galaxy S21 5G Smartphone SIM Free Android Mobile Phone Phantom Violet 128GB</td>
+                <td>769.00</td>
+            </tr>
+            <tr>
+                <td><img src="https://m.media-amazon.com/images/I/51+mAHVzirL._AC_UY218_.jpg" alt="Huawei P Smart 2021" height=100 width=75></img></td>
+                <td><a href="https://www.amazon.co.uk/HUAWEI-Smartphone-SuperCharge-5000mAh-Midnight-Black/dp/B08KW5MXTQ/ref=sr_1_3?crid=1SV55QFS622GZ&dchild=1&keywords=huawei+phone&qid=1629204496&sprefix=huwawei%2Caps%2C194&sr=8-3">Huawei P Smart 2021</a></td>
+                <td>Huawei P Smart 2021, 6.67" FHD+ Display, 4 GB RAM, 128 GB ROM, HMS Device, Midnight Black</td>
+                <td>129.73</td>
+            </tr>
+            <tr>
+                <td><img src="https://m.media-amazon.com/images/I/71hNxB2mrmL._AC_UY218_.jpg" alt="Motorola G30" height=100 width=75></img></td>
+                <td><a href="https://www.amazon.co.uk/Motorola-Qualcomm-Snapdragon-battery-Exclusive/dp/B08YQMW6S5/ref=sr_1_3?dchild=1&keywords=moto&qid=1629204722&sr=8-3">Motorola G30</a></td>
+                <td>Motorola G30 (6.5 Inch 90Hz, Dual SIM, 6/128GB, Android 11), Dark Pearl</td>
+                <td>209.99</td>
+            </tr>
+        </table>
+        <h3>Contact us:</h3>
+        <textarea></textarea>
+
+        <h4>Find us online: on <a href="https://www.instagram.com/rafaeau/">Instagram.</a></h4>
+
+        <footer>
+            <p>Phone Shop: 4G & 5G Mobile Phones, Tablets & SIMs</p>
+            <address><p>Frankfurter Allee 150, Berlin Germany</p></address>
+        </footer>
+
+        <script lang="text/javascript">
+
+            function changeH1(){
+                const h1 = document.querySelector("h1")
+                h1.style.color = "green"
+                h1.innerText = "THIS IS THE NEW TITLE!!!"
+            }
+
+            console.log(changeH1())
+
+            /* function changeBC(){
+                const backgroundColor = document.querySelector("background-color")
+                backgroundColor.style.color = "blue"
+            }
+
+            console.log(changeBC()) */
+
+            function changeAddress(){
+                const address = document.querySelector("footer")
+                address.innerText = "FAKE ADDRESS!!!"
+            }
+
+            console.log(changeAddress())
+
+            const toggleAllHeaders = function() {
+
+let allPrices = document.querySelectorAll("td")
+
+/* THIS IS JUST A LONGER, MORE EXPLICIT VERSION OF THE BOTTOM ALTERNATIVE
+
+for (let i = 0; i < allOurHeaderNodes.length; i++) {
+    let header = allOurHeaderNodes[i]
+    header.classList.toggle("selected")
+}*/
+
+for (let header of allOurHeaderNodes){
+    header.classList.toggle("selected")
+}
+}
+
+        </script>
+    </body>
+</html>
