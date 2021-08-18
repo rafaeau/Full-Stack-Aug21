@@ -4,6 +4,12 @@
         <meta charset = "utf-8">
         <title>Phone Shop: 4G & 5G Mobile Phones, Tablets & SIMs</title>
         <style>
+            .giant-font{
+                font-size: 20px
+            }
+            .hidden{
+                display: none
+            }
             h1 {
                 font-size: 40px;
                 text-align: center;
@@ -12,7 +18,7 @@
                 color: #12171d;
                 text-shadow: 1px 1px 1px rgb(183, 212, 255);
             }
-            table,p,h4,h2,h3,footer {
+            table,p,h4,h2,h3,footer,button {
                 text-align:center
             }
             img {
@@ -23,7 +29,7 @@
                 border : 1px solid black;
                 text-align : center
             }  
-            table,textarea{
+            table,textarea,button{
                 width : 100%
             }
             body {
@@ -86,8 +92,16 @@
 
         <footer>
             <p>Phone Shop: 4G & 5G Mobile Phones, Tablets & SIMs</p>
-            <address><p>Frankfurter Allee 150, Berlin Germany</p></address>
+            <p>Frankfurter Allee 150, Berlin Germany</p>
         </footer>
+
+        <button onclick="changeH1()">Change h1 tags</button>
+        <button onclick="changeBC()">Change bg color</button>
+        <button onclick="changeAddress()">Change address</button>
+        <button onclick="addClasstoLinks()">Change link</button>
+        <button onclick="toggleImagesClass()">Change img</button>
+        <button onclick="setRandomColor()">Change link color</button>
+        
 
         <script lang="text/javascript">
 
@@ -97,38 +111,45 @@
                 h1.innerText = "THIS IS THE NEW TITLE!!!"
             }
 
-            console.log(changeH1())
+            //console.log(changeH1())
 
-            /* function changeBC(){
-                const backgroundColor = document.querySelector("background-color")
-                backgroundColor.style.color = "blue"
+            function changeBC(){
+                document.querySelector('body').style['background-color'] = "grey"
             }
 
-            console.log(changeBC()) */
+            //console.log(changeBC())
 
             function changeAddress(){
                 const address = document.querySelector("footer")
                 address.innerText = "FAKE ADDRESS!!!"
             }
 
-            console.log(changeAddress())
+            //console.log(changeAddress())
 
-            const toggleAllHeaders = function() {
+            function addClasstoLinks(){
+                for (let node /*can be any name*/ of document.querySelectorAll('a')){
+                    node.classList.toggle('giant-font')
+                }
+            }
+            
+            function toggleImagesClass(){
+                for(let image of document.querySelectorAll('img')){
+                    image.classList.toggle('hidden')
+                }
+            }
 
-let allPrices = document.querySelectorAll("td")
-
-/* THIS IS JUST A LONGER, MORE EXPLICIT VERSION OF THE BOTTOM ALTERNATIVE
-
-for (let i = 0; i < allOurHeaderNodes.length; i++) {
-    let header = allOurHeaderNodes[i]
-    header.classList.toggle("selected")
-}*/
-
-for (let header of allOurHeaderNodes){
-    header.classList.toggle("selected")
-}
-}
-
+            function setRandomColor(){
+                const color = getRandomColor()
+                for (let price of document.querySelectorAll('tr > td:nth-child(4)')){
+                    price.style.color = color
+                }
+            }
+            function getRandomColor(){
+                const red = Math.round(Math.random() * 255);
+                const green = Math.round(Math.random() * 255);
+                const blue = Math.round(Math.random() * 255);
+                return "rgb(" + red + ", " + green + ", " + blue +")";
+            }
         </script>
     </body>
 </html>
