@@ -32,16 +32,10 @@
     />
     <style>
       .row{
-        background-color:rgb(179, 161, 138)
       }
       .col{
         color: white;
-        height: 300px;
-        position: 0px 0px 0px 0px;
-        width: 50%;
-        padding: 0px 0px 0px 0px;
         display: inline-block;
-        
       }
     </style>
   </head>
@@ -49,21 +43,73 @@
 
     <script src="m2-d4.js"></script>
 
-    <div class = "container">
-      <div class = "row">
-        <div class = "col-6 py-2">
-          Add new name to list:
-          <input type = "text">
-          <button class = "btn btn-primary">Add name</button>
+    <div class="container">
+      <div class="row">
+        <div class="col-12 col-sm-6 py-4">
+          <form>
+            <span class="mx-2">Add names:</span>
+            <input type="text" class="ml-auto">
+            <button type="submit" class="btn btn-primary m-2">Add to list</button>
+          </form>
+        </div>
+
+        <div class="col-12 col-sm-6 py-4 d-flex align-items-center">
+          <div class="ml-auto">
+          <span class="mx-2">Add teams:</span>
+          <button class="btn btn-primary">-</button>
+          <span id="team-number" class="px-3">2</span>
+          <button class="btn btn-primary">+</button>
           </div>
-        <div class = "col-6 py-2">
-          Add new group:
-          <input type = "text">
-          <button class = "btn btn-primary">Add group</button>
+        </div>
+
+        <div class="col-6 mx-auto">
+          <h4>List of names</h4>
+          <ul class="list-group">
+          <li class="list-group-item">Rafael</li>
+          <li class="list-group-item">João</li>
+          <li class="list-group-item">Paulo</li>
+          <li class="list-group-item">Bruno</li>
+          <li class="list-group-item">Vitor</li>
+        </ul>
+        </div>
+
+        <div class="col-12 my-5">
+          <div class="row">
+          <div class="col-3">
+            <h4>Team 1</h4>
+            <ul class="list-group">
+              <li class="list-group-item">Rafael</li>
+              <li class="list-group-item">João</li>
+              <li class="list-group-item">Paulo</li>
+              <li class="list-group-item">Bruno</li>
+              <li class="list-group-item">Vitor</li>
+            </ul>
+          </div>
+
+          <div class="col-3">
+            <h4>Team 2</h4>
+            <ul class="list-group">
+              <li class="list-group-item">Rafael</li>
+              <li class="list-group-item">João</li>
+              <li class="list-group-item">Paulo</li>
+              <li class="list-group-item">Bruno</li>
+              <li class="list-group-item">Vitor</li>
+            </ul>
+          </div>
+
+          <div class="col-3">
+            <h4>Team 3</h4>
+            <ul class="list-group">
+              <li class="list-group-item">Rafael</li>
+              <li class="list-group-item">João</li>
+              <li class="list-group-item">Paulo</li>
+              <li class="list-group-item">Bruno</li>
+              <li class="list-group-item">Vitor</li>
+            </ul>
+          </div>
+          </div>
         </div>
       </div>
-    </div>
-    </div>
     </div>
 
     
