@@ -28,7 +28,41 @@
             EX9) Write a selector to target the "back to top" link     #### EXTRA Try doing it without targeting the footer element directly
             EX10) Write a selector to target the footer
         */
+        
+      .jumbotron h1{
+        background-color: red
+      }
+      .container .blog-header, .container .nav-scroller {
+        background-color: yellow
+      }
+      .jumbotron > .col-md-6 > p > a {
+        background-color: red
+      }
+      .container > .row > .col-md-8 > .blog-post:first-of-type {
+        background-color: lightblue
+      }
+      .container .nav-scroller .nav a:nth-child(even) {
+        background-color: white
+      }
+      .container > .row > .col-md-8 > .blog-post:last-of-type {
+        background-color: lightgoldenrodyellow
+      }
+      .col-md-4 .p-4 .list-unstyled > li {
+        background-color: lightgreen;
+      }
+
+      .blog-post .blog-post-meta a[text^="Jacob"] {
+        background-color: moccasin;
+      }
+      .blog-footer p:last-of-type > a{
+        background-color: moccasin;
+      }
+      .blog-footer {
+        background-color: sandybrown;
+      }
+
     </style>
+
     <meta charset="utf-8" />
     <meta
       name="viewport"
@@ -70,38 +104,7 @@
           font-size: 3.5rem;
         }
       }
-      .jumbotron h1{
-        background-color: red
-      }
-      .container .blog-header, .container .nav-scroller {
-        background-color: yellow
-      }
-      .jumbotron > .col-md-6 > p > a {
-        background-color: red
-      }
-      .container > .row > .col-md-8 > .blog-post:first-of-type {
-        background-color: lightblue
-      }
-      .container .nav-scroller .nav a:nth-child(even) {
-        background-color: white
-      }
-      .container > .row > .col-md-8 > .blog-post:last-of-type {
-        background-color: purple
-      }
-      .col-md-4 .p-4 .list-unstyled > li {
-        background-color: saddlebrown;
-      }
-
-      .blog-post .blog-post-meta a[text^="Jacob"] {
-        background-color: moccasin;
-      }
-      .blog-footer p:last-of-type > a{
-        background-color: moccasin;
-      }
-      .blog-footer {
-        background-color: sandybrown;
-      }
-
+      
     </style>
     <link
       href="https://fonts.googleapis.com/css?family=Playfair+Display:700,900"
@@ -487,6 +490,8 @@
         EX19) Write a function and attach it to the "Older" button, to remove the last Blog Post
         EX20) Write an alert with the name of the author every time the user hover with the mouse over an author name
     */
+
+
     </script>
   </body>
 </html>
