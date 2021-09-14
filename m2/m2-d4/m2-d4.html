@@ -46,9 +46,9 @@
     <div class="container">
       <div class="row">
         <div class="col-12 col-sm-6 py-4">
-          <form>
+          <form onSubmit="addPerson(event)">
             <span class="mx-2">Add names:</span>
-            <input type="text" class="ml-auto">
+            <input id="input-name" type="text" class="ml-auto">
             <button type="submit" class="btn btn-primary m-2">Add to list</button>
           </form>
         </div>
@@ -64,12 +64,8 @@
 
         <div class="col-6 mx-auto">
           <h4>List of names</h4>
-          <ul class="list-group">
+          <ul id="list-queue" class="list-group">
           <li class="list-group-item">Rafael</li>
-          <li class="list-group-item">João</li>
-          <li class="list-group-item">Paulo</li>
-          <li class="list-group-item">Bruno</li>
-          <li class="list-group-item">Vitor</li>
         </ul>
         </div>
 
@@ -112,6 +108,19 @@
       </div>
     </div>
 
+    <script>
+      const inputName = document.querySelector("#input-name")
+      const listQueue = document.querySelector("#list-queue")
+
+      function addPerson(event){
+        event.preventDefault()
+        
+        const li = document.createElement("li")
+        li.classList.add("list-group-item")
+        
+        listQueue.appendCHild(li)
+      }
+    </script>
     
     <script
       src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
